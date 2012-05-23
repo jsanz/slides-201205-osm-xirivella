@@ -36,14 +36,13 @@
       <h1>Introducción a OpenStreetMap</h1>
       <h2>Segunda parte</h2>
       
-      <p class="evento"><a target="_blank" href="http://iparty.aditel.org/">
-        		iParty 13</a> · Castellón · Abril 2012</p>
+      <p class="evento">Xirivella · Mayo 2012</p>
       <div  class="yo">
         <p>
           <a target="_blank" title="url de las charlas"
-           href="http://bit.ly/iparty13-osm ">http://bit.ly/iparty13-osm </a> · 
+           href="http://bit.ly/xirivella-osm-201205 ">http://bit.ly/xirivella-osm-201205 </a> · 
           <a target="_blank" title="repo del código de las charlas"
-           href="https://github.com/jsanz/slides-201204-osm-iparty13/tree/gh-pages">github</a>
+           href="https://github.com/jsanz/slides-201205-osm-xirivella/tree/gh-pages">github</a>
         </p>
         <p>
           <a href="http://jorgesanz.net">Jorge Sanz</a> · 
@@ -63,23 +62,31 @@
 
         <li>Tipos de <strong>datos</strong></li>
 
-        <li>Llamadas a la <strong>API</strong></li>
+        <li><strong>Potlach</strong> como primer editor básico</li>
 
         <li>
-          <strong>JOSM</strong>
-
-          <ul>
-            <li>Preparar la sesión de edición</li>
-
-            <li>Comandos más empleados en JOSM</li>
-
-            <li>Filtros</li>
-
-            <li>Etiquetado y predefinidos</li>
-          </ul>
+          <strong>JOSM</strong> (si hay tiempo)
         </li>
       </ul>
-    </div><!-- PROCEDIMIENTO     -->
+    </div>
+    
+    <!-- EJERCICIO -->
+    <div id="ej1" class="step" data-x="4700" data-y="-4800">
+      <h2>Ejercicio: darse de alta</h2>
+
+      <ol class="numbers">
+        <li>Visita <a target="_blank" href="http://osm.org">http://osm.org</a> y pulsa en <em>registrarse</em></li>
+        <li>Date de alta</li>
+        <li>Confirma la licencia de tus contribuciones</li>
+      </ol>
+      
+      <p class="center"><img src="imgs/alta.png" style="height:380px;" alt="Date de alta"></p>
+    </div>
+    
+    
+    
+    
+    <!-- PROCEDIMIENTO     -->
 
     <div id="flujo" class="step" data-x="4500" data-y="2000" data-scale="4">
       <h2>Flujo de trabajo</h2>
@@ -430,12 +437,6 @@
       <h2>El modelo de datos</h2>
     </div>
 
-    <div id="datos2" class="step" data-x="-3500" data-y="-500" data-scale="2">
-      <blockquote>
-        Nada que ver con el modelo tradicional de <em>features</em>
-      </blockquote>
-    </div>
-
     <div id="datos3" class="step section" data-x="-3500" data-y="-1000" data-scale="1">
       <h2>Modelo de datos</h2>
 
@@ -563,198 +564,22 @@
       "http://wiki.openstreetmap.org/wiki/Map_Features" target="_blank" title=
       "MapFeatures"><img class="figure" src="imgs/map-features.png" width="500"
       alt="MapFeatures"></a></p>
-    </div><!-- LLAMADAS A LA API  -->
+    </div>
+    
+    
+    <!-- POTLACH  -->
 
-    <div id="api" class="step section" data-x="-500" data-y="-3000" data-scale="4">
-      <h2>La API de OSM</h2>
+    <div id="potlach" class="step section" data-x="-500" data-y="-3000" data-scale="4">
+      <h2>Potlach, el editor web de OSM</h2>
     </div>
 
-    <div id="api1" class="step" data-x="-1300" data-y="-2200" data-scale="2">
+    <div id="pt1" class="step" data-x="-1300" data-y="-2200" data-scale="2">
       <ul class="discs">
-        <li>Único medio de <strong>modificar</strong> datos</li>
-
-        <li><a href="http://wiki.openstreetmap.org/wiki/API_v0.6" target=
-        "_blank" title="API 0.6">v0.6</a> desde 2009</li>
-
-        <li>RESTful</li>
-
-        <li>Consultas anónimas, actualizaciones por <strong>OAuth</strong></li>
-
-        <li>Soporte de <strong>versionado</strong></li>
-
-        <li>Descargas limitadas<br>
-        a cuadrados de <strong>15'</strong></li>
+        <li></li>
       </ul>
     </div>
-
-    <div id="api2" class="step api" data-x="300" data-y="-3000" data-scale="1">
-      <p><a href=
-      "http://api.openstreetmap.org/api/capabilities">http://api.openstreetmap.org/api/capabilities</a></p>
-      <pre class="brush: xml;">
-&lt;osm version="0.6" generator="OpenStreetMap server"&gt;
-&lt;api&gt;
-&lt;version minimum="0.6" maximum="0.6"/&gt;
-&lt;area maximum="0.25"/&gt;
-&lt;tracepoints per_page="5000"/&gt;
-&lt;waynodes maximum="2000"/&gt;
-&lt;changesets maximum_elements="50000"/&gt;
-&lt;timeout seconds="300"/&gt;
-&lt;/api&gt;
-&lt;/osm&gt;
     
-</pre>
-    </div>
-
-    <div id="api3" class="step api" data-x="300" data-y="-2400" data-scale="1">
-      <p><a href=
-      "http://api.openstreetmap.org/api/0.6/node/933346497">http://api.openstreetmap.org/api/0.6/node/933346497</a></p>
-      <pre class="brush: xml;">
-&lt;osm version="0.6" generator="OpenStreetMap server"&gt;
-&lt;node id="933346497" lat="41.5827283" lon="2.013415" 
-version="3" changeset="8211372" user="Jaume Figueras"
-uid="55987" visible="true" timestamp="2011-05-21T22:26:13Z"&gt;
-&lt;tag k="ref" v="FIXME"/&gt;
-&lt;tag k="network" v="Xarxa d'autobusos Urbans de Terrassa"/&gt;
-&lt;tag k="covered" v="no"/&gt;
-&lt;tag k="tactile_paving" v="yes"/&gt;
-&lt;tag k="bench" v="yes"/&gt;
-&lt;tag k="public_transport" v="platform"/&gt;
-&lt;tag k="highway" v="bus_stop"/&gt;
-&lt;tag k="uic_ref" v="FIXME"/&gt;
-&lt;tag k="uic_name" v="FIXME"/&gt;
-&lt;tag k="name" v="Arenys de Mar"/&gt;
-&lt;tag k="shelter" v="yes"/&gt;
-&lt;tag k="operator" v="TMESA"/&gt;
-&lt;tag k="layer" v="0"/&gt;
-&lt;/node&gt;
-&lt;/osm&gt;
-    
-</pre>
-    </div>
-
-    <div id="api4" class="step api" data-x="300" data-y="-1700" data-scale="1">
-      <p><a href=
-      "http://api.openstreetmap.org/api/0.6/node/933346497/history">http://api.openstreetmap.org/api/0.6/node/933346497/history</a></p>
-      <pre class="brush: xml;">
-    
-&lt;osm version="0.6" generator="OpenStreetMap server"&gt;
-&lt;node id="933346497" lat="41.5827339" lon="2.0134288" changeset="5928981"
-user="Jaume Figueras" uid="55987" visible="true" timestamp="2010-10-01T15:46:00Z" version="1"&gt;
-&lt;tag k="highway" v="bus_stop"/&gt;
-&lt;tag k="shelter" v="yes"/&gt;
-&lt;tag k="name" v="Arenys de Mar"/&gt;
-&lt;tag k="tactile_paving" v="yes"/&gt;
-&lt;tag k="bench" v="yes"/&gt;
-&lt;/node&gt;
-&lt;node id="933346497" lat="41.5827339" lon="2.0134288" changeset="8167041" 
-user="Jaume Figueras" uid="55987" visible="true" timestamp="2011-05-16T21:38:38Z" version="2"&gt;
-&lt;tag k="highway" v="bus_stop"/&gt;
-&lt;tag k="shelter" v="yes"/&gt;
-&lt;tag k="network" v="Xarxa d'autobusos Urbans de Terrassa"/&gt;
-&lt;tag k="name" v="Arenys de Mar"/&gt;
-&lt;tag k="ref" v="FIXME"/&gt;
-&lt;tag k="uic_name" v="FIXME"/&gt;
-&lt;tag k="tactile_paving" v="yes"/&gt;
-&lt;tag k="layer" v="0"/&gt;
-&lt;tag k="covered" v="no"/&gt;
-&lt;tag k="public_transport" v="platform"/&gt;
-&lt;tag k="uic_ref" v="FIXME"/&gt;
-&lt;tag k="bench" v="yes"/&gt;
-&lt;tag k="operator" v="TMESA"/&gt;
-&lt;/node&gt;
-&lt;node id="933346497" lat="41.5827283" lon="2.013415" changeset="8211372" 
-user="Jaume Figueras" uid="55987" visible="true" timestamp="2011-05-21T22:26:13Z" version="3"&gt;
-&lt;tag k="highway" v="bus_stop"/&gt;
-&lt;tag k="shelter" v="yes"/&gt;
-&lt;tag k="network" v="Xarxa d'autobusos Urbans de Terrassa"/&gt;
-&lt;tag k="name" v="Arenys de Mar"/&gt;
-&lt;tag k="ref" v="FIXME"/&gt;
-&lt;tag k="uic_name" v="FIXME"/&gt;
-&lt;tag k="tactile_paving" v="yes"/&gt;
-&lt;tag k="layer" v="0"/&gt;
-&lt;tag k="covered" v="no"/&gt;
-&lt;tag k="public_transport" v="platform"/&gt;
-&lt;tag k="uic_ref" v="FIXME"/&gt;
-&lt;tag k="bench" v="yes"/&gt;
-&lt;tag k="operator" v="TMESA"/&gt;
-&lt;/node&gt;
-&lt;/osm&gt;
-    
-</pre>
-    </div>
-
-    <div id="api5" class="step api" data-x="1500" data-y="-1700" data-scale=
-    "1">
-      <p><a href=
-      "http://api.openstreetmap.org/api/0.6/changeset/8211372">http://api.openstreetmap.org/api/0.6/changeset/8211372</a></p>
-      <pre class="brush: xml;">
-    
-&lt;osm version="0.6" generator="OpenStreetMap server"&gt;
-&lt;changeset id="8211372" user="Jaume Figueras" 
-uid="55987" created_at="2011-05-21T22:26:04Z" 
-closed_at="2011-05-21T22:26:17Z" open="false"
-min_lat="41.5617613" min_lon="2.0082875" 
-max_lat="41.5859881" max_lon="2.0241229"&gt;
-&lt;tag k="comment" v="Bus de Terrassa - Línia 7 adaptada al nou esquema i arranjaments varis"/&gt;
-&lt;tag k="created_by" v="JOSM/1.5 (4064 en)"/&gt;
-&lt;/changeset&gt;
-&lt;/osm&gt;
-    
-</pre>
-    </div>
-
-    <div id="api6" class="step api" data-x="1500" data-y="-2300" data-scale=
-    "1">
-      <p><a href=
-      "http://api.openstreetmap.org/api/0.6/map?bbox=2.0082875,41.5617613,2.0241229,41.5859881">
-      http://api.openstreetmap.org/api/0.6/map?bbox=2.0082875,41.5617613,2.0241229,41.5859881</a></p>
-      <pre class="brush: xml;">
-    
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;osm version="0.6" generator="CGImap 0.0.2"&gt;
-        &lt;bounds minlat="41.5617613" minlon="2.0082875" 
-                maxlat="41.5859881" maxlon="2.0241229"/&gt;
-        &lt;node id="282873786" lat="41.5803041" lon="2.0268698" 
-                user="Jaume Figueras" uid="55987" visible="true"
-                version="5" changeset="1576508" timestamp="2009-06-20T17:59:37Z"&gt;
-                        &lt;tag k="highway" v="traffic_signals"/&gt;
-        &lt;/node&gt;
-        &lt;node id="282873797" lat="41.5805069" lon="2.0266905" 
-                user="Jaume Figueras" uid="55987" visible="true"
-                version="6" changeset="5858775" timestamp="2010-09-23T23:30:09Z"&gt;
-                        &lt;tag k="highway" v="traffic_signals"/&gt;
-        &lt;/node&gt;
-....
-    
-</pre>
-
-      <p>Son 1.6MB de descarga</p>
-    </div>
-
-    <div id="api7" class="step slide" data-x="1500" data-y="-3100" data-scale=
-    "1">
-      <h2>Actualización de datos</h2>
-
-      <ul class="discs">
-        <li>PUT /api/0.6/changeset/create</li>
-
-        <li>PUT /api/0.6/changeset/#id/close</li>
-
-        <li>PUT /api/0.6/[N|W|R]/create</li>
-
-        <li>DELETE /api/0.6/[N|W|R]/#id</li>
-      </ul>
-
-      <h2>Otras consultas</h2>
-
-      <ul class="discs">
-        <li>GET /api/0.6/[N|W|R]/#id/relations</li>
-
-        <li>GET /api/0.6/node/#id/ways</li>
-
-        <li>GET /api/0.6/[W|R]/#id/full</li>
-      </ul>
-    </div><!-- JOSM -->
+    <!-- JOSM -->
 
     <div id="josm" class="step section" data-x="-1300" data-y="2900" data-scale="4">
       <h2>Java OpenStreetMap<br>

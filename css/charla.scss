@@ -30,18 +30,18 @@ Cambios
 $cIz2: #9FA3D9; // violeta claro
 $cIz1: #5B8547; // verde oscuro
 $cBase: #9ED285; // OSM
-$cDe1: #9F6B55; // rosa claro
-$cDe2: #855E4E;  // rosa oscuro
+
+$cDe1: #728cab; // azul claro
+$cDe2: #3a4757;  // azul oscuro
 $cAzul: #BFD8EC;
 
 $cPrimario: $cIz1;
 $cSecundario: darken($cAzul,50%);
 
 
-
 $cFondo: $cDe1;// $cIz1;
-$cFondo1: lighten($cFondo,60%); /*fondo*/
-$cFondo2: lighten($cFondo,40%); /*exterior*/
+$cFondo1: lighten($cFondo,40%); /*fondo*/
+$cFondo2: lighten($cFondo,30%); /*exterior*/
 $cFondo3: lighten($cFondo,60%); /*interior*/
 
 $cQuotes: $cDe1;
@@ -70,8 +70,8 @@ $f_condensada: Inconsolata, courier;
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	/* los tamaños son los de la imagen */
-	width: 193px;
-  height: 50px;
+	width: 130px;
+  height:130px;
 }
 
 
