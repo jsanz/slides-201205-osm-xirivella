@@ -1,63 +1,114 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Slides-201205-osm-xirivella by jsanz</title>
+    <title>Charla OSM Xirivella</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Charla OSM Xirivella">
+    <meta name="author" content="Jorge Sanz">
+
+    <!-- Le styles -->
+    <link href="http://jorgesanz.net/js/bootstrap/css/bootstrap.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Slides-201205-osm-xirivella</h1>
-        <p>Diapositivas para la charla de OSM en Xirivella</p>
-        <p class="view"><a href="https://github.com/jsanz/slides-201205-osm-xirivella">View the Project on GitHub <small>jsanz/slides-201205-osm-xirivella</small></a></p>
-        <ul>
-          <li><a href="https://github.com/jsanz/slides-201205-osm-xirivella/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jsanz/slides-201205-osm-xirivella/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jsanz/slides-201205-osm-xirivella">Fork On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/jsanz">jsanz</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
     
+    
+    <style type="text/css">
+      .container, .row,{width:720px;}
+      h1 {
+      font-size: 60px;
+      line-height: 60px;
+      margin:10px 0;
+      }
+      .span12{margin-top:25px;}
+      .span12 p{font-size:20px;line-height:20px;}
+      .span6{width:360px;}
+      .parte1 ul, .parte2 ul{
+        padding-left:25px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://jorgesanz.net/js/bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://jorgesanz.net/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://jorgesanz.net/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://jorgesanz.net/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <img src="imgs/osm-logo.png" style="float:right;width:250px;margin-left:25px;"/>
+          <h1>Introducción a Open Street Map</h1>
+      
+          <p class="evento">Charla/taller · Xirivella · Mayo 2012</p>
+          <p class="yo">
+            <a href="http://jorgesanz.net">Jorge Sanz</a> · 
+            <a href="http://twitter.com/xurxosanz" target="_blank" title="Jorge en twitter">@xurxosanz</a>
+          </p>
+        <p>
+          <a target="_blank" title="url de las charlas"
+           href="http://bit.ly/xirivella-osm-201205 ">hhttp://bit.ly/xirivella-osm-201205 </a> · 
+          <a target="_blank" title="repo del código de las charlas"
+           href="https://github.com/jsanz/slides-201205-osm-xirivella/tree/gh-pages">github</a>
+        </p>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="span6 parte1">
+          <h2>Primera parte</h2>
+          <ul>
+            <li>¿Qué es OSM?</li>
+            <li>Comparando con GMaps</li>
+            <li>HOT</li>
+            <li>Casos de uso</li>
+          </ul>
+          
+           <a class="btn btn-primary btn-large" href="osm-i.html">
+                Acceder
+              </a>
+        </div>
+        <div class="span6  parte2">
+          <h2>Segunda parte</h2>
+          <ul>
+            <li>Flujo de trabajo</li>
+            <li>Modelo de datos</li>
+            <li>La API de OSM</li>
+            <li>Java OpenStreetMap Editor</li>
+          </ul>
+          
+           <a class="btn btn-primary btn-large" href="osm-ii.html">
+                Acceder
+              </a>
+        </div>
+      </div>
+      
+    </div>    
+    
+    
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9508776-10']);
+    _gaq.push(['_setDomainName', 'jorgesanz.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
   </body>
 </html>
+
