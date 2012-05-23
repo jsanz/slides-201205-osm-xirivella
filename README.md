@@ -1,4 +1,4 @@
-Charla OSM iParty 13
+Charla/Taller OSM Xirivella
 ================================
 
 Este repo almacena las diapositivas utilizadas para mi charla sobre el proyecto
